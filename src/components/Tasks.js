@@ -16,9 +16,9 @@ export default class Tasks extends Component {
     /* Active at the top, completed at the bottom,
        new ones appear after the last task of it's category */
     data.sort((a, b) => {
-      if ((a.isActive && !b.isActive) || !a.isActive && !b.isActive) {
+      if (a.isActive && !b.isActive) {
         return -1
-      } else if (!a.isActive && b.isActive) {
+      } else if ((!a.isActive && b.isActive)) {
         return 1
       } else {
         return 0

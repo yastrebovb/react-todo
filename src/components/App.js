@@ -27,11 +27,7 @@ export default class App extends Component {
   componentDidMount() {
     if (localStorage.data) this.setState({ data: JSON.parse(localStorage.getItem('data')) })
 
-    window.addEventListener('beforeunload', this.saveStateToLocalStorage)
-  }
-
-  saveStateToLocalStorage = () => {
-    localStorage.setItem('data', JSON.stringify(this.state.data))
+    window.addEventListener('beforeunload', () => localStorage.setItem('data', JSON.stringify(this.state.data)))
   }
 
   addTask = taskValue => {
