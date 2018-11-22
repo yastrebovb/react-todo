@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
+import FlipMove from 'react-flip-move';
 import sort from '../actions/sort'
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import '../stylesheets/animations.css'
 
 export default class Tasks extends Component {
-  componentDidMount() {
-    console.log('componetn did omiunt')
-  }
-
   handleRemoveTask = event => {
     this.props.removeTask(event.target.dataset.id)
   }
@@ -22,13 +17,8 @@ export default class Tasks extends Component {
     data = sort(data, sortingMethod)
 
     const tasks = (
-      <TransitionGroup>
+      <FlipMove>
         {data.map((task) =>
-          <CSSTransition
-            key={task.id}
-            timeout={300}
-            classNames="move"
-          >
             <li
               className={task.isActive ? 'task task--active' : 'task task--completed'}
               id={task.id}
@@ -41,9 +31,8 @@ export default class Tasks extends Component {
                 <span className="task-remove" data-id={task.id} onClick={this.handleRemoveTask}></span>
               </div>
             </li>
-          </CSSTransition>
         )}
-      </TransitionGroup>)
+      </FlipMove>)
 
     return (
       <ul className="tasks">
