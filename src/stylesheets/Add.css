@@ -1,0 +1,20 @@
+.add {
+  display: flex;
+  position: absolute;
+  bottom: -1rem;
+  
+  &__input {
+    padding: .5rem 1.5rem;
+    border: 2px solid #eef0f5;
+    color: inherit;
+  }
+
+  &__btn {
+    width: 3rem;
+    font-size: 1.8rem;
+    color: #46be8b;
+    background-color: #50e3a4;
+    border: none;
+    cursor: pointer;
+  }
+}

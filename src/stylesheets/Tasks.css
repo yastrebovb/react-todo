@@ -1,0 +1,48 @@
+.tasks {
+  .task {
+    display: flex;
+    margin-bottom: 2rem;
+    animation: shake .75s both;
+
+    &--active {
+      .task-toggle {
+        background-image: url('../assets/img/active.svg')
+      }
+    }
+
+    &--completed {
+      color: #bdc0ca;
+
+      .task-toggle {
+        background-image: url('../assets/img/completed.png');
+      }
+    }
+
+    &__actions {
+      margin-left: auto;
+
+      span {
+        display: inline-block;
+        width: 1.85rem;
+        height: 1.85rem;
+        background-size: cover;
+        cursor: pointer;
+      }
+
+      .task-remove {
+        margin-left: .55rem;
+        background-image: url('../assets/img/remove.svg');
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  to {
+    transform: translate3d(1px, 0, 0);
+  }
+}

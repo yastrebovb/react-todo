@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo&subset=cyrillic');
+@import url(./stylesheets/App.css);
+@import url(./stylesheets/Header.css);
+@import url(./stylesheets/Tasks.css);
+@import url(./stylesheets//Add.css);
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*,
+*:active,
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Arimo', sans-serif;
+  font-size: 62.5%; /* 1 rem = 10px (10px/16px = 62.5) */
+
+  @media screen and (min-width: 768px) {
+    font-size: 75%; /* 1 rem = 12px */
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 87.5%; /* 1 rem = 14px */
+  }
+}
+
+body {
+  background-color: #f0efe9;
+  color: #3e434f;
+  font-size: 1.5rem; /* 15px */
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
