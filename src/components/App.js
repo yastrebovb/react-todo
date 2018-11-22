@@ -7,21 +7,31 @@ export default class App extends Component {
   state = {
     data: [
       {
-        value: 'Active task',
+        value: 'Buy some milk',
         isActive: true,
         id: 1
       },
       {
-        value: 'Another active task',
+        value: 'Watch last late-night show',
         isActive: true,
         id: 2
       },
       {
-        value: 'Completed task',
+        value: 'Do 100 push-ups',
         isActive: false,
         id: 3
       }
     ]
+  }
+
+  componentDidMount() {
+    if (localStorage.data) this.setState({ data: JSON.parse(localStorage.getItem('data')) })
+
+    window.addEventListener('beforeunload', this.saveStateToLocalStorage)
+  }
+
+  saveStateToLocalStorage = () => {
+    localStorage.setItem('data', JSON.stringify(this.state.data))
   }
 
   addTask = taskValue => {

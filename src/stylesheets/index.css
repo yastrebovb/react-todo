@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo&subset=cyrillic');
-@import url(./stylesheets/App.css);
-@import url(./stylesheets/Header.css);
-@import url(./stylesheets/Tasks.css);
-@import url(./stylesheets//Add.css);
+@import url(./App.css);
+@import url(./Header.css);
+@import url(./Tasks.css);
+@import url(./Add.css);
 
 *,
 *:before,
