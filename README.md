@@ -1,8 +1,5 @@
 # React Todo App
 
-## Demo https://yastrebovb.github.io/react-todo/.
-
-![image](https://user-images.githubusercontent.com/23297041/48904525-b299bb00-ee6f-11e8-8747-c0cc2bef441f.png)
 
 ## Instructions
 
@@ -20,3 +17,4 @@ Run
 ```bash
 $ npm start 
 
+![image](https://user-images.githubusercontent.com/23297041/48904525-b299bb00-ee6f-11e8-8747-c0cc2bef441f.png)
