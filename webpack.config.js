@@ -1,6 +1,8 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRootPlugin = require('html-webpack-root-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ReactRootPlugin = require('html-webpack-root-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -13,11 +15,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'To-Do React',
+      title: 'to-do',
       filename: 'index.html',
-      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
     }),
-    new ReactRootPlugin()
+    new ReactRootPlugin(),
+    new FaviconsWebpackPlugin('./src/assets/favicon.png')
   ],
   module: {
     rules: [
@@ -68,4 +71,4 @@ module.exports = {
       }
     ]
   }
-};
+}
