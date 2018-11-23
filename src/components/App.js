@@ -1,33 +1,25 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import Option from './Option'
 import Tasks from './Tasks'
 import Add from './Add'
 
 export default class App extends Component {
   state = {
-    data: [
-      {
-        value: 'Buy some milk',
-        isActive: true,
-        id: 1
-      },
-      {
-        value: 'Watch last late-night show',
-        isActive: true,
-        id: 2
-      },
-      {
-        value: 'Do 100 push-ups',
-        isActive: false,
-        id: 3
-      }
-    ]
+    data: [],
+    sorting: 'active'
   }
 
   componentDidMount() {
     if (localStorage.data) this.setState({ data: JSON.parse(localStorage.getItem('data')) })
 
     window.addEventListener('beforeunload', () => localStorage.setItem('data', JSON.stringify(this.state.data)))
+  }
+
+  changeSortingMethod = (methodName) => {
+    this.setState({
+      sorting: methodName
+    })
   }
 
   addTask = taskValue => {
@@ -63,8 +55,11 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Option sortingMethod={this.changeSortingMethod} />
         <Tasks
           data={this.state.data}
+          sortingMethod={this.state.sorting}
+          option={this.state.option}
           toggleTask={this.toggleTask}
           removeTask={this.removeTask}
         />

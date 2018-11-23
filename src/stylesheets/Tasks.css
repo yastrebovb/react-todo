@@ -2,7 +2,6 @@
   .task {
     display: flex;
     margin-bottom: 2rem;
-    animation: shake .75s both;
 
     &--active {
       .task-toggle {
@@ -32,17 +31,11 @@
       .task-remove {
         margin-left: .55rem;
         background-image: url('../assets/img/remove.svg');
+        
+        &:hover {
+          filter: brightness(.9);
+        }
       }
     }
-  }
-}
-
-@keyframes shake {
-  from {
-    transform: translate3d(-1px, 0, 0);
-  }
-  
-  to {
-    transform: translate3d(1px, 0, 0);
   }
 }
