@@ -5,8 +5,8 @@ export default class Option extends Component {
     isVisible: false
   }
 
-  toggleVisibility = (e) => this.setState({isVisible: !this.state.isVisible})
-  
+  toggleVisibility = () => this.setState({ isVisible: !this.state.isVisible })
+
   handleSelect = e => {
     this.toggleVisibility()
     this.props.sortingMethod(e.target.dataset.value)
@@ -14,7 +14,7 @@ export default class Option extends Component {
 
   render() {
     const options = (
-      <div onClick={this.handleSelect} className="sorting__options">
+      <div onClick={this.handleSelect} className="sorting__options" data-id="option">
         <p data-value="active">Active</p>
         <p data-value="completed">Completed</p>
         <p data-value="date">Creation date</p>

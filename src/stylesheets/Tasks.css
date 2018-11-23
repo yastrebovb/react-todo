@@ -31,6 +31,10 @@
       .task-remove {
         margin-left: .55rem;
         background-image: url('../assets/img/remove.svg');
+        
+        &:hover {
+          filter: brightness(.9);
+        }
       }
     }
   }
