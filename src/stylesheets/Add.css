@@ -11,6 +11,7 @@
 
   &__btn {
     width: 3rem;
+    padding: 0;
     font-size: 1.8rem;
     color: #46be8b;
     background-color: #50e3a4;

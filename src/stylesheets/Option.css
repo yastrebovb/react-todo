@@ -9,6 +9,11 @@
     background-image: url('../assets/img/sorting.svg');
     background-size: cover;
     cursor: pointer;
+    filter: brightness(0.98);
+
+    &:hover {
+      filter: brightness(0.96);
+    }
   }
 
   &__options {
