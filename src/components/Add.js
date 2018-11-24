@@ -10,7 +10,7 @@ export default class Add extends Component {
   }
 
   handleInput = e => {
-    this.setState({ userInput: e.target.value })
+    if (e.target.value.length < 25 ) this.setState({ userInput: e.target.value })
   }
 
   handleFormSubmit = e => {
