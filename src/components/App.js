@@ -11,12 +11,13 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    if (localStorage.data) this.setState({ data: JSON.parse(localStorage.getItem('data')) })
+    if (localStorage.data)
+      this.setState({ data: JSON.parse(localStorage.getItem('data')) })
 
     window.addEventListener('beforeunload', () => localStorage.setItem('data', JSON.stringify(this.state.data)))
   }
 
-  changeSortingMethod = (methodName) => {
+  changeSortingMethod = methodName => {
     this.setState({
       sorting: methodName
     })
@@ -36,7 +37,7 @@ export default class App extends Component {
 
   toggleTask = taskId => {
     let { data } = this.state
-    data.map((el) => el.id === +taskId ? el.isActive = !el.isActive : el.isActive)
+    data.map(el => el.id === +taskId ? el.isActive = !el.isActive : el.isActive)
 
     this.setState({
       data: data
@@ -47,7 +48,7 @@ export default class App extends Component {
     let { data } = this.state
 
     this.setState({
-      data: data.filter((el) => el.id !== +taskId)
+      data: data.filter(el => el.id !== +taskId)
     })
   }
 

@@ -13,12 +13,11 @@ export default class Tasks extends Component {
 
   render() {
     let { data, sortingMethod } = this.props
-
     data = sort(data, sortingMethod)
 
     const tasks = (
       <FlipMove>
-        {data.map((task) =>
+        {data.map(task =>
             <li
               className={task.isActive ? 'task task--active' : 'task task--completed'}
               id={task.id}

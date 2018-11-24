@@ -10,13 +10,15 @@ export default class Add extends Component {
   }
 
   handleInput = e => {
-    if (e.target.value.length < 25 ) this.setState({ userInput: e.target.value })
+    if (e.target.value.length < 25 ) 
+      this.setState({ userInput: e.target.value })
   }
 
   handleFormSubmit = e => {
     e.preventDefault()
 
-    if (this.state.userInput) this.props.addTask(this.state.userInput)
+    if (this.state.userInput) 
+      this.props.addTask(this.state.userInput)
 
     this.setState({ userInput: '' },
       () => this.textInput.focus()
@@ -30,7 +32,7 @@ export default class Add extends Component {
           type="text"
           className="add__input"
           value={this.state.userInput}
-          ref={(node) => this.textInput = node}
+          ref={node => this.textInput = node}
           onChange={this.handleInput}
           autoFocus
         />
