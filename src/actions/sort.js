@@ -1,14 +1,14 @@
 // Active first
-const active = data => data.sort((a,b) => a.isActive && !b.isActive ? -1 : !a.isActive && b.isActive ? 1 : 0)
+const active = data => [...data].sort((a, b) => a.isActive && !b.isActive ? -1 : !a.isActive && b.isActive ? 1 : 0)
 
 // Completed first
-const completed = data => data.sort((a,b) => a.isActive && !b.isActive ? 1 : !a.isActive && b.isActive ? -1 : 0)
+const completed = data => [...data].sort((a, b) => a.isActive && !b.isActive ? 1 : !a.isActive && b.isActive ? -1 : 0)
 
 // New ones first
-const date = data => data.sort((a,b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
+const date = data => [...data].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
 
 // In alphabetical order
-const alphabetical = data => data.sort((a, b) => {
+const alphabetical = data => [...data].sort((a, b) => {
   const first = a.value.toLowerCase(), second = b.value.toLowerCase()
   return first.localeCompare(second)
 })
