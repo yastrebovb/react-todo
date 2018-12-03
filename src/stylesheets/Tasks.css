@@ -5,7 +5,11 @@
 
     &--active {
       .task-toggle {
-        background-image: url('../assets/img/active.svg')
+        background-image: url('../assets/img/active.svg');
+      }
+      
+      .task-toggle:hover {
+        background-image: url('../assets/img/completed.png');
       }
     }
 
@@ -14,6 +18,10 @@
 
       .task-toggle {
         background-image: url('../assets/img/completed.png');
+      }
+
+      .task-toggle:hover {
+        background-image: url('../assets/img/active.svg');
       }
     }
 
@@ -27,6 +35,7 @@
         background-size: cover;
         cursor: pointer;
       }
+
 
       .task-remove {
         margin-left: .55rem;

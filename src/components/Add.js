@@ -9,20 +9,22 @@ export default class Add extends Component {
     }
   }
 
+  componentDidUpdate() {
+    this.textInput.focus()
+  }
+
   handleInput = e => {
-    if (e.target.value.length < 25 ) 
+    if (e.target.value.length < 25)
       this.setState({ userInput: e.target.value })
   }
 
   handleFormSubmit = e => {
     e.preventDefault()
 
-    if (this.state.userInput) 
+    if (this.state.userInput)
       this.props.addTask(this.state.userInput)
 
-    this.setState({ userInput: '' },
-      () => this.textInput.focus()
-    )
+    this.setState({ userInput: '' })
   }
 
   render() {
@@ -34,7 +36,6 @@ export default class Add extends Component {
           value={this.state.userInput}
           ref={node => this.textInput = node}
           onChange={this.handleInput}
-          autoFocus
         />
         <input
           type="submit"

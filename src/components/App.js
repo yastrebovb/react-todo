@@ -60,7 +60,6 @@ export default class App extends Component {
         <Tasks
           data={this.state.data}
           sortingMethod={this.state.sorting}
-          option={this.state.option}
           toggleTask={this.toggleTask}
           removeTask={this.removeTask}
         />

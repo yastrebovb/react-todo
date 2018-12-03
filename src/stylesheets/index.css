@@ -11,12 +11,6 @@
   box-sizing: inherit;
 }
 
-*,
-*:active,
-*:focus {
-  outline: none;
-}
-
 html {
   box-sizing: border-box;
   font-family: 'Arimo', sans-serif;
@@ -42,3 +36,11 @@ ul {
   list-style-type: none;
 }
 
+input {
+  border-radius: none;
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
