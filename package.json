@@ -27,14 +27,14 @@
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-react-root-plugin": "^0.9.0",
     "html-webpack-root-plugin": "^0.10.0",
-    "image-webpack-loader": "^4.5.0",
+    "image-webpack-loader": "^4.6.0",
     "postcss-nested": "^4.1.0",
     "postcss-url": "^8.0.0",
     "precss": "^3.1.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
